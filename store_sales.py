@@ -50,14 +50,14 @@ class Wallmart_st_sales():
 
 if __name__=="__main__":
 
-    st.sidebar.text('Bem vindo ao meu portfolio \nde projetos \nde ML(Machine Learning e \npor ventura Deep Learning)')
+    st.sidebar.text('Bem vindo ao meu portfolio \nde projetos \nde ML(Machine Learning e \nDeep Learning)')
     seletor_de_projetos = st.sidebar.radio('Projetos',options=['Home','Walmart - Store Sales Forecasting(Kaggle Competition)'])
     if seletor_de_projetos == 'Home':
         st.text('')
     if seletor_de_projetos == 'Walmart - Store Sales Forecasting(Kaggle Competition)':
         
 
-        st.markdown("Bem-vindo ao meu portfólio de projetos de Machine Learning e Deep Learning!"
+        st.markdown(
               "Walmart - Store Sales Forecasting\n"
                 "\nEste projeto é uma competição do Kaggle chamada Walmart Recruiting - Store Sales Forecasting. O objetivo é prever as vendas semanais para diferentes departamentos em várias lojas da Walmart, utilizando dados históricos.\n"
 
