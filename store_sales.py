@@ -85,12 +85,16 @@ if __name__=="__main__":
         pipeline_3 = wp.final_preparation(pipeline_2)
 
         if st.button('Prever Valor das vendas :'):
-            model = joblib.load('random_forest_model.pkl')
 
-            prediction = model.predict(pipeline_3)
+            try:
+                model = joblib.load('random_forest_model.pkl')
 
-            pipeline_2['Weekly_Sales'] = prediction
-            st.metric("Weekly Sales Prediction", f"{pipeline_2['Weekly_Sales'].iloc[0]:,.2f}")
+                prediction = model.predict(pipeline_3)
+
+                pipeline_2['Weekly_Sales'] = prediction
+                st.metric("Weekly Sales Prediction", f"{pipeline_2['Weekly_Sales'].iloc[0]:,.2f}")
+            except:
+                st.text('Por favor verifique se o separadores decimais estão corretos')    
 
    
 
